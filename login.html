@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login page</title>
+	<style>
+		#shoot {
+			color: blue;
+	     font-family: sans-serif;
+	     text-align: center;
+		}
+		#lb{
+			background-color: red;
+			width: 350px;
+			height: 350px;
+			position: absolute;
+			left: 42%;
+		}
+		#lo{
+			color: yellow;
+			text-align: left;
+
+		}
+          #em{
+          	font-size: 24px;
+          	height: 18px;
+
+          }
+          #nj{
+          	color: white;
+          }
+          #po{
+          	font-size: 24px;
+          	height: 18px;
+          }
+          #pol{
+          	color: white;
+          }
+          #btn{
+          	background-color: green;
+          	width: 152px;
+          	height: 25px;
+          	border-radius: 25px;
+          	color: white;
+          	position: absolute;
+          	left: 20%;
+          	top: 75%;
+          }
+	</style>
+
+
+</head>
+<body>
+<h1 id="shoot"> <b>Shoot</b> </h1>
+<div id="lb"><h1 id="lo"> Login</h1><hr>
+	<h2 id='nj'>Enter the Email<br></h2>
+	<input type="emai" name="" id="em">
+<h2 id="pol">	Enter the Password<br><input type="password" name="" id="po"></h2><br>
+<button id="btn"  onclick="login()"> Login</button>
+<script type="text/javascript">
+	function login() {
+		var e = document.getElementById('em').value;
+		var p = document.getElementById('po').value;
+		var se = localStorage.getItem('se');
+		var sp = localStorage.getItem('sp');
+		if (e==se && p==sp) {
+			window.location.href ='index.html'
+		}
+	}
+</script>
+</body>
+</html>

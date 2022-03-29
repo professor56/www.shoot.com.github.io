@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Signup</title>
+	<style type="text/css">
+		#hd{
+			color: blue;
+			text-align: center;
+		}
+		#sb{
+			background-color: yellow;
+			width: 560px;
+			height: 560px;
+			position: absolute;
+			left: 30%;
+
+
+		}
+		#kn{
+			color: green;
+			text-align: left;
+
+		}
+
+	</style>
+</head>
+<body>
+<h1 id="hd">Shoot</h1>
+<div id="sb">
+	<h1 id="kn">Signup</h1>
+	<hr>
+<form>
+	Enter the Name<input type="name" name="" id="nm"><br><br>
+	Enter the Age<input type="number" name="" id="num"><br><br>
+	Enter the Email<input type="text" name="" id="m"><br><br>
+	Enter the Password<input type="password" name="" id="pl"><br><br>
+	<input type="button" name="" id="btn"  value="Create Accound" onclick="sign()">
+
+</form>
+</div>
+<script type="text/javascript">
+	function sign() {
+
+		var mk= document.getElementById('m').value;
+		var cv = document.getElementById('pl').value;
+		localStorage.setItem('se',mk);
+		localStorage.setItem('sp', cv)
+		location.href='login.html'
+	}
+</script>
+</body>
+</html>
